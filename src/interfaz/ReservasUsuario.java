@@ -1,5 +1,10 @@
 package interfaz;
 
+/*
+ * @author Santiago Gordillo Molina,Sebastian Roman Sanchez
+ 
+
+ */  
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -26,7 +31,11 @@ public class ReservasUsuario extends JFrame {
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
 
-        // Panel superior con ComboBox de cédulas
+        /*
+         * @author Santiago Gordillo Molina,Sebastian Roman Sanchez
+         * Panel de comboBox de Cedulas
+
+         */      
         JPanel panelSuperior = new JPanel();
         panelSuperior.add(new JLabel("Seleccionar cédula:"));
         cbCedulas = new JComboBox<>();
@@ -34,20 +43,33 @@ public class ReservasUsuario extends JFrame {
         panelSuperior.add(cbCedulas);
         add(panelSuperior, BorderLayout.NORTH);
 
-        // Lista de reservas
+        /*
+         * @author Santiago Gordillo Molina,Sebastian Roman Sanchez
+         * Lista de reservas
+
+         */   
         modeloLista = new DefaultListModel<>();
         listaReservas = new JList<>(modeloLista);
         add(new JScrollPane(listaReservas), BorderLayout.CENTER);
 
-        // Panel de botones
-        JPanel panelBotones = new JPanel();
+
+        /*
+         * @author Santiago Gordillo Molina,Sebastian Roman Sanchez
+         * Panel Botones
+
+         */  
+       JPanel panelBotones = new JPanel();
         btnEliminar = new JButton("Eliminar Reserva");
         btnEditar = new JButton("Editar Reserva");
         panelBotones.add(btnEliminar);
         panelBotones.add(btnEditar);
         add(panelBotones, BorderLayout.SOUTH);
 
-        // Eventos
+
+        /*
+         * @author Santiago Gordillo Molina,Sebastian Roman Sanchez
+         * Eventos
+         */  
         cbCedulas.addActionListener(e -> actualizarListaReservas());
         btnEliminar.addActionListener(this::eliminarReserva);
         btnEditar.addActionListener(this::editarReserva);
@@ -107,7 +129,11 @@ public class ReservasUsuario extends JFrame {
 
         Reserva reservaSeleccionada = reservasFiltradas.get(indice);
 
-        // Solicitar nuevas fechas
+
+        /*
+         * @author Santiago Gordillo Molina,Sebastian Roman Sanchez
+         * Solicitar nuevas fechas 
+         */  
         String nuevaFechaEntrada = JOptionPane.showInputDialog(this, "Nueva fecha de entrada (YYYY-MM-DD):", reservaSeleccionada.getFechaEntrada());
         String nuevaFechaSalida = JOptionPane.showInputDialog(this, "Nueva fecha de salida (YYYY-MM-DD):", reservaSeleccionada.getFechaSalida());
 

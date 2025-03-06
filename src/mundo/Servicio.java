@@ -1,5 +1,11 @@
 package mundo;
-
+/*
+ * @author Santiago Gordillo Molina,Sebastian Roman Sanchez
+ * 
+ * Universidad del Quindio
+ * Facultad de ingenieria 
+ * ingenieria de sistemas y computacion
+ */
 public class Servicio implements Consumible {
     private String nombre;
 

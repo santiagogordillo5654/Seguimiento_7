@@ -1,5 +1,10 @@
 package interfaz;
 
+/*
+ * @author Santiago Gordillo Molina,Sebastian Roman Sanchez
+ * 
+
+ */  
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;

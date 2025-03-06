@@ -1,24 +1,31 @@
 package mundo;
-
+/*
+ * @author Santiago Gordillo Molina,Sebastian Roman Sanchez
+ * 
+ * Universidad del Quindio
+ * Facultad de ingenieria 
+ * ingenieria de sistemas y computacion
+ */
 public class Habitacion {
     private int numero;
-    private String tipo; // "Simple", "Doble", "Suite"
+    private String tipo; 
     private double precio;
 
-    // Constructor original
     public Habitacion(int numero, String tipo, double precio) {
         this.numero = numero;
         this.tipo = tipo;
         this.precio = precio;
     }
 
-    // Nuevo constructor que solo recibe número y tipo
     public Habitacion(int numero, String tipo) {
         this.numero = numero;
         this.tipo = tipo;
         this.precio = asignarPrecio(tipo);
     }
-
+    /*
+     * @author Santiago Gordillo Molina,Sebastian Roman Sanchez
+     * metodo para asiganar precios 
+     */
     private double asignarPrecio(String tipo) {
         return switch (tipo) {
             case "Simple" -> 50.0;

@@ -1,9 +1,14 @@
 package mundo;
-
+/*
+ * @author Santiago Gordillo Molina,Sebastian Roman Sanchez
+ * Clase que tiene parametros para cliente
+ * Universidad del Quindio
+ * Facultad de ingenieria 
+ * ingenieria de sistemas y computacion
+ */
 import java.util.ArrayList;
 import java.util.List;
 
-// Clase Cliente
 public class Cliente {
     private String nombre;
     private String dni;
